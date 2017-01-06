@@ -125,10 +125,7 @@
             }
 
             .now-playing {
-                position: absolute;
-                bottom: 30px;
-                right: 30px;
-                display: none;
+
             }
 
             .now-playing .live {
@@ -141,7 +138,7 @@
                 margin-right: 0.5em;
             }
 
-            .play-button {
+            .player-wrapper {
                 width: 640px;
                 box-sizing: border-box;
                 height: 180px;
@@ -194,36 +191,23 @@
     <body>
         <div id="wrapper">
             <h1>WLFM</h1>
-            <!-- <p>Lorem ipsum dolor sit amet, possim latine nec cu. Ne congue impedit facilisi his. Altera possit fierent vis ex, mel ei docendi invidunt corrumpit. Pro graeco numquam no, quo errem choro saepe cu. Mei accusam molestiae eu, ne illum bonorum per. Ut eum viris tibique. Eam malorum elaboraret no.</p> -->
 
-            <nav>
-                <a href="#">About</a>
-                <a href="#">Trivia</a>
-                <a href="#">Contact</a>
-            </nav>
+            <div class="player-wrapper">
+                <audio id="audio-player" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
+                <button id="audio-button" name="Play/pause audio" onclick="audioToggle();return false;">Play/pause audio</button>
 
-            <div class="now-playing">
-                <span class="live">LIVE</span>
-                <span class="show">Show…</span>
-            </div>
-
-            <div class="play-button">
-                <div class="play-button-inner">
+                <div class="now-playing">
+                    <span class="live">LIVE</span>
+                    <a class="show">Show…*</a>
+                    <a href="#">Schedule link…</a>
+                    <span class="small">*probably</span>
                 </div>
             </div>
-
-            <audio id="audio-player" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
-
-            <a id="audio-button" title="Play/pause audio" href="#" onclick="audioToggle();return false;">Play/pause audio</a>
 
             <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
         </div>
 
         <script type="text/javascript">
-            // window.onload = function() {
-            //     document.getElementById("audio-button").addEventListener('click', audioToggle);
-            // }
-
             var audioPlayer = document.getElementById('audio-player');
             var audioButton = document.getElementById('audio-button');
             function audioToggle() {
