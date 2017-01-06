@@ -212,7 +212,29 @@
                 </div>
             </div>
 
+            <audio id="audio-player" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
+
+            <a id="audio-button" title="Play/pause audio" href="#" onclick="audioToggle();return false;">Play/pause audio</a>
+
             <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
         </div>
+
+        <script type="text/javascript">
+            // window.onload = function() {
+            //     document.getElementById("audio-button").addEventListener('click', audioToggle);
+            // }
+
+            var audioPlayer = document.getElementById('audio-player');
+            var audioButton = document.getElementById('audio-button');
+            function audioToggle() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    audioButton.className = "pause";
+                } else {
+                    audioPlayer.pause();
+                    audioButton.className = "play";
+                }
+            }
+        </script>
     </body>
 </html>
