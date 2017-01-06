@@ -59,18 +59,17 @@
 
             body {
                 background: #eee;
-                font-size: 16px;
+                font-size: 18px;
                 font-family: 'Karla', sans-serif;
                 color: #eee;
             }
 
             h1 {
-                font-size: 60px;
+                font-size: 70px;
                 font-family: 'Syncopate';
                 font-weight: 700;
-                letter-spacing: -3px;
+                letter-spacing: -4px;
                 text-align: center;
-                margin-top: 160px;
                 margin-left: -20px;
                 /*animation-name: glow;
                 animation-duration: 0.5s;
@@ -89,17 +88,11 @@
 
             h2 {
                 font-size: 1.2em;
-                color: #eee;
                 font-weight: normal;
-                line-height: 1.3em;
+                line-height: 1.4em;
                 font-weight: 700;
-                position: relative;
-                border-top: 2px solid #444;
-                top: 85px;
-                left: 40px;
-                width: 480px;
-                padding-top: 20px;
-                display: none;
+                width: 544px;
+                margin: 40px auto;
             }
 
             nav {
@@ -107,6 +100,7 @@
                 top: 140px;
                 left: 40px;
                 font-size: 1.2em;
+                display: none;
             }
 
             nav a {
@@ -121,7 +115,8 @@
                 min-height: 500px;
                 position: absolute;
                 margin: 15px;
-                background: #111;
+                padding: 120px 0 0;
+                background: #000;
                 border-radius: 4px;
                 top: 0;
                 right: 0;
@@ -147,18 +142,19 @@
             }
 
             .play-button {
-                width: 500px;
-                height: 120px;
-                border-radius: 4px;
+                width: 640px;
+                box-sizing: border-box;
+                height: 180px;
+                border-radius: 2px;
                 cursor: pointer;
-                margin: 0 auto;
-                position: relative;
-                top: 200px;
-                background: yellow;
+                margin: 120px auto 0;
+                background: none;
+                border: 4px solid gold;
             }
 
             .play-button-inner {
                 width: 0; 
+                display: none;
                 height: 0; 
                 border-top: 30px solid transparent;
                 border-bottom: 30px solid transparent;
@@ -198,7 +194,6 @@
     <body>
         <div id="wrapper">
             <h1>WLFM</h1>
-            <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
             <!-- <p>Lorem ipsum dolor sit amet, possim latine nec cu. Ne congue impedit facilisi his. Altera possit fierent vis ex, mel ei docendi invidunt corrumpit. Pro graeco numquam no, quo errem choro saepe cu. Mei accusam molestiae eu, ne illum bonorum per. Ut eum viris tibique. Eam malorum elaboraret no.</p> -->
 
             <nav>
@@ -216,6 +211,8 @@
                 <div class="play-button-inner">
                 </div>
             </div>
+
+            <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
         </div>
     </body>
 </html>
