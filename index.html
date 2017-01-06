@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WLFM Radio</title> <!-- Insert title -->
+        <meta name="description" content=""> <!-- Insert description -->
+        <meta name="viewport" content="width="> <!-- Insert width -->
+
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Syncopate:400,700');
+
+            /* CSS Reset */
+
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            /* WLFM Style */
+
+            body {
+                background: #eee;
+                font-size: 16px;
+                font-family: 'Karla', sans-serif;
+                color: #eee;
+            }
+
+            h1 {
+                font-size: 60px;
+                font-family: 'Syncopate';
+                font-weight: 700;
+                letter-spacing: -3px;
+                text-align: center;
+                margin-top: 160px;
+                margin-left: -20px;
+                /*animation-name: glow;
+                animation-duration: 0.5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-out;*/
+                text-shadow:
+                        0px 0px 40px rgba(0,157,219,1),
+                        0.2em 0.2em 2px rgba(0,157,219,0.9),
+                        0.4em 0.4em 4px rgba(0,157,219,0.7),
+                        0.6em 0.6em 6px rgba(0,157,219,0.5);
+            }
+
+            h1:first-letter {
+                letter-spacing: -1px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+                color: #eee;
+                font-weight: normal;
+                line-height: 1.3em;
+                font-weight: 700;
+                position: relative;
+                border-top: 2px solid #444;
+                top: 85px;
+                left: 40px;
+                width: 480px;
+                padding-top: 20px;
+                display: none;
+            }
+
+            nav {
+                position: absolute;
+                top: 140px;
+                left: 40px;
+                font-size: 1.2em;
+            }
+
+            nav a {
+                color: yellow;
+                text-decoration: none;
+                margin-bottom: 20px;
+                letter-spacing: 2px;
+                display: block;
+            }
+
+            #wrapper {
+                min-height: 500px;
+                position: absolute;
+                margin: 15px;
+                background: #111;
+                border-radius: 4px;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            .now-playing {
+                position: absolute;
+                bottom: 30px;
+                right: 30px;
+                display: none;
+            }
+
+            .now-playing .live {
+                color: red;
+                border: 1px solid red;
+                border-radius: 2px;
+                padding: 0.2em 0.4em;
+                font-size: 0.8em;
+                letter-spacing: 1px;
+                margin-right: 0.5em;
+            }
+
+            .play-button {
+                width: 500px;
+                height: 120px;
+                border-radius: 4px;
+                cursor: pointer;
+                margin: 0 auto;
+                position: relative;
+                top: 200px;
+                background: yellow;
+            }
+
+            .play-button-inner {
+                width: 0; 
+                height: 0; 
+                border-top: 30px solid transparent;
+                border-bottom: 30px solid transparent;
+                border-left: 60px solid black;
+                position: relative;
+                top: 30px;
+                left: 40px;
+            }
+
+            @keyframes glow {
+                0% {
+                   text-shadow:
+                        0px 0px 40px rgba(0,157,219,1),
+                        0.2em 0.2em 2px rgba(0,157,219,0.9),
+                        0.4em 0.4em 4px rgba(0,157,219,0.6),
+                        0.6em 0.6em 6px rgba(0,157,219,0.3);
+                }
+
+                50% {
+                    text-shadow:
+                        0px 0px 80px rgba(255,255,255,1),
+                        0.25em 0.25em 2px rgba(0,142,219,0.9),
+                        0.46em 0.46em 4px rgba(0,142,219,0.6),
+                        0.67em 0.67em 6px rgba(0,142,219,0.3);
+                }
+
+                100% {
+                    text-shadow:
+                        0px 0px 40px rgba(0,157,219,1),
+                        0.2em 0.2em 2px rgba(0,157,219,0.9),
+                        0.4em 0.4em 4px rgba(0,157,219,0.6),
+                        0.6em 0.6em 6px rgba(0,157,219,0.3);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>WLFM</h1>
+            <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
+            <!-- <p>Lorem ipsum dolor sit amet, possim latine nec cu. Ne congue impedit facilisi his. Altera possit fierent vis ex, mel ei docendi invidunt corrumpit. Pro graeco numquam no, quo errem choro saepe cu. Mei accusam molestiae eu, ne illum bonorum per. Ut eum viris tibique. Eam malorum elaboraret no.</p> -->
+
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Trivia</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <div class="now-playing">
+                <span class="live">LIVE</span>
+                <span class="show">Show…</span>
+            </div>
+
+            <div class="play-button">
+                <div class="play-button-inner">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
