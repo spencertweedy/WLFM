@@ -2,191 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>WLFM Radio</title> <!-- Insert title -->
-        <meta name="description" content=""> <!-- Insert description -->
-        <meta name="viewport" content="width="> <!-- Insert width -->
-
-        <style type="text/css">
-            @import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Syncopate:400,700');
-
-            /* CSS Reset */
-
-            html, body, div, span, applet, object, iframe,
-            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-            a, abbr, acronym, address, big, cite, code,
-            del, dfn, em, img, ins, kbd, q, s, samp,
-            small, strike, strong, sub, sup, tt, var,
-            b, u, i, center,
-            dl, dt, dd, ol, ul, li,
-            fieldset, form, label, legend,
-            table, caption, tbody, tfoot, thead, tr, th, td,
-            article, aside, canvas, details, embed, 
-            figure, figcaption, footer, header, hgroup, 
-            menu, nav, output, ruby, section, summary,
-            time, mark, audio, video {
-                margin: 0;
-                padding: 0;
-                border: 0;
-                font-size: 100%;
-                font: inherit;
-                vertical-align: baseline;
-            }
-            /* HTML5 display-role reset for older browsers */
-            article, aside, details, figcaption, figure, 
-            footer, header, hgroup, menu, nav, section {
-                display: block;
-            }
-            body {
-                line-height: 1;
-            }
-            ol, ul {
-                list-style: none;
-            }
-            blockquote, q {
-                quotes: none;
-            }
-            blockquote:before, blockquote:after,
-            q:before, q:after {
-                content: '';
-                content: none;
-            }
-            table {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-
-            /* WLFM Style */
-
-            body {
-                background: #eee;
-                font-size: 18px;
-                font-family: 'Karla', sans-serif;
-                color: #eee;
-            }
-
-            h1 {
-                font-size: 70px;
-                font-family: 'Syncopate';
-                font-weight: 700;
-                letter-spacing: -4px;
-                text-align: center;
-                margin-left: -20px;
-                /*animation-name: glow;
-                animation-duration: 0.5s;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-out;*/
-                text-shadow:
-                        0px 0px 40px rgba(0,157,219,1),
-                        0.2em 0.2em 2px rgba(0,157,219,0.9),
-                        0.4em 0.4em 4px rgba(0,157,219,0.7),
-                        0.6em 0.6em 6px rgba(0,157,219,0.5);
-            }
-
-            h1:first-letter {
-                letter-spacing: -1px;
-            }
-
-            h2 {
-                font-size: 1.2em;
-                font-weight: normal;
-                line-height: 1.4em;
-                font-weight: 700;
-                width: 544px;
-                margin: 40px auto;
-            }
-
-            nav {
-                position: absolute;
-                top: 140px;
-                left: 40px;
-                font-size: 1.2em;
-                display: none;
-            }
-
-            nav a {
-                color: yellow;
-                text-decoration: none;
-                margin-bottom: 20px;
-                letter-spacing: 2px;
-                display: block;
-            }
-
-            #wrapper {
-                min-height: 500px;
-                position: absolute;
-                margin: 15px;
-                padding: 120px 0 0;
-                background: #000;
-                border-radius: 4px;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
-
-            .now-playing {
-
-            }
-
-            .now-playing .live {
-                color: red;
-                border: 1px solid red;
-                border-radius: 2px;
-                padding: 0.2em 0.4em;
-                font-size: 0.8em;
-                letter-spacing: 1px;
-                margin-right: 0.5em;
-            }
-
-            .player-wrapper {
-                width: 640px;
-                box-sizing: border-box;
-                height: 180px;
-                border-radius: 2px;
-                cursor: pointer;
-                margin: 120px auto 0;
-                background: none;
-                border: 4px solid gold;
-            }
-
-            .play-button-inner {
-                width: 0; 
-                display: none;
-                height: 0; 
-                border-top: 30px solid transparent;
-                border-bottom: 30px solid transparent;
-                border-left: 60px solid black;
-                position: relative;
-                top: 30px;
-                left: 40px;
-            }
-
-            @keyframes glow {
-                0% {
-                   text-shadow:
-                        0px 0px 40px rgba(0,157,219,1),
-                        0.2em 0.2em 2px rgba(0,157,219,0.9),
-                        0.4em 0.4em 4px rgba(0,157,219,0.6),
-                        0.6em 0.6em 6px rgba(0,157,219,0.3);
-                }
-
-                50% {
-                    text-shadow:
-                        0px 0px 80px rgba(255,255,255,1),
-                        0.25em 0.25em 2px rgba(0,142,219,0.9),
-                        0.46em 0.46em 4px rgba(0,142,219,0.6),
-                        0.67em 0.67em 6px rgba(0,142,219,0.3);
-                }
-
-                100% {
-                    text-shadow:
-                        0px 0px 40px rgba(0,157,219,1),
-                        0.2em 0.2em 2px rgba(0,157,219,0.9),
-                        0.4em 0.4em 4px rgba(0,157,219,0.6),
-                        0.6em 0.6em 6px rgba(0,157,219,0.3);
-                }
-            }
-        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WLFM Radio</title>
+        <meta name="description" content="Broadcasting from Lawrence University since 1956. Home of the Great Midwest Trivia Contest.">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div id="wrapper">
@@ -205,6 +24,23 @@
             </div>
 
             <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
+
+            <div id="blog">
+                <article>
+                    <div class="post-meta">10.26.2016</div>
+                    <div class="post-body">
+                        <h3>Post Title</h3>
+                        <p>WLFM has been broadcasting since … Lorem ipsum dolor sit amet, mel nonumy animal feugait ea, ea mutat blandit senserit duo. Novum dignissim mediocritatem qui ut, te simul clita partem mei. Cu usu ubique vocibus omnesque, petentium patrioque percipitur ut est. Qui tation alienum albucius at, no eum posse eruditi reprimique. Maiorum dignissim ne eos, duo cetero pericula no. Novum ornatus delicata ne ius.</p>
+                    </div>
+                </article>
+                <article>
+                    <div class="post-meta">10.26.2016</div>
+                    <div class="post-body">
+                        <h3>Post Title</h3>
+                        <p>WLFM has been broadcasting since … Lorem ipsum dolor sit amet, mel nonumy animal feugait ea, ea mutat blandit senserit duo. Novum dignissim mediocritatem qui ut, te simul clita partem mei. Cu usu ubique vocibus omnesque, petentium patrioque percipitur ut est. Qui tation alienum albucius at, no eum posse eruditi reprimique. Maiorum dignissim ne eos, duo cetero pericula no. Novum ornatus delicata ne ius.</p>
+                    </div>
+                </article>
+            </div>
         </div>
 
         <script type="text/javascript">
