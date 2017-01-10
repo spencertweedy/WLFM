@@ -68,12 +68,14 @@ h1 {
         -20px 20px rgba(62,0,219,0),
         -40px 40px rgba(62,0,219,0),
         -60px 60px rgba(62,0,219,0);
-    margin: 100px 0 1.8em -60px;
+    margin: 0 0 0 -60px;
     letter-spacing: -5px;
     animation-name: glow;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
+
+    flex-basis: 20%;
 }
 
 h1:first-letter {
@@ -144,14 +146,19 @@ article .post-meta {
     text-align: right;
 }
 
-#wrapper {
-    width: 750px;
-    margin: 0 auto 100px;
-    padding: 0 25px;
+footer {
+    
 }
 
-#wrapper > div {
-    margin-bottom: 3.5em;
+#wrapper {
+    width: 750px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*align-items: center;*/
 }
 
 #blog {
@@ -176,8 +183,8 @@ article .post-meta {
 }
 
 #audio-player {
-    padding: 1em;
-    border: 4px solid red;
+    padding: 0;
+    border: 5px solid red;
     box-shadow: 
         0 0 0 5px black,
         0 0 0 10px orange,
@@ -185,9 +192,9 @@ article .post-meta {
         0 0 0 20px yellow,
         0 0 25px 25px rgba(255,204,0,0.3);
     text-align: center;
-    width: 670px;
+    width: 700px;
     height: 180px;
-    margin: 120px 0 0 20px;
+    margin: 0 0 0 20px;
     background: none;
 }
 
