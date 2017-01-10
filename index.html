@@ -11,9 +11,10 @@
         <div id="wrapper">
             <h1>WLFM</h1>
 
-            <div class="player-wrapper">
-                <audio id="audio-player" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
+            <div id="audio-player">
+                <audio id="audio-host" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
                 <button id="audio-button" name="Play/pause audio" onclick="audioToggle();return false;">Play/pause audio</button>
+                <noscript>Please enable JavaScript in order to play audio.</noscript>
 
                 <div class="now-playing">
                     <span class="live">LIVE</span>
@@ -25,7 +26,16 @@
 
             <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
 
+            <nav>
+                <a href="#">About + Contact</a>
+                <a href="#">Blog</a>
+                <a href="#">Trivia</a>
+            </nav>
+
+            <!-- <span>New</span><a href="#">Our Winter 2017 Recommendations</a> -->
+
             <div id="blog">
+                Blog
                 <article>
                     <div class="post-meta">10.26.2016</div>
                     <div class="post-body">
@@ -40,11 +50,12 @@
                         <p>WLFM has been broadcasting since … Lorem ipsum dolor sit amet, mel nonumy animal feugait ea, ea mutat blandit senserit duo. Novum dignissim mediocritatem qui ut, te simul clita partem mei. Cu usu ubique vocibus omnesque, petentium patrioque percipitur ut est. Qui tation alienum albucius at, no eum posse eruditi reprimique. Maiorum dignissim ne eos, duo cetero pericula no. Novum ornatus delicata ne ius.</p>
                     </div>
                 </article>
+                <a href="#">View older posts &rarr;</a>
             </div>
         </div>
 
-        <script type="text/javascript">
-            var audioPlayer = document.getElementById('audio-player');
+        <script type="text/javascript" defer>
+            var audioPlayer = document.getElementById('audio-host');
             var audioButton = document.getElementById('audio-button');
             function audioToggle() {
                 if (audioPlayer.paused) {
