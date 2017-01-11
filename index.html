@@ -15,15 +15,16 @@
 
             <main>
                 <div id="audio-player">
-                    <audio id="audio-host" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
-                    <button id="audio-button" name="Play/pause audio" onclick="audioToggle();return false;">Play/pause audio</button>
-                    <noscript>Please enable JavaScript in order to play audio.</noscript>
+                    <div class="col">
+                        <audio id="audio-host" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
+                        <button id="audio-button" name="Play/pause audio" onclick="audioToggle();return false;">Play/pause audio</button>
+                        <noscript>Please enable JavaScript in order to play audio.</noscript>
+                    </div>
 
-                    <div class="now-playing">
-                        <span class="live">LIVE</span>
-                        <a class="show">Show…*</a>
-                        <a href="#">Schedule link…</a>
-                        <span class="small">*probably</span>
+                    <div class="col">
+                        <div><span class="live">LIVE</span><span class="show">Hella Eloquent</span></div>
+                        <div><a href="#">View full schedule</a>
+                        <span class="small">*probably</span></div>
                     </div>
                 </div>
             </main>
