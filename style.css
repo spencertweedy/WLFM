@@ -115,7 +115,7 @@ h1:first-letter {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 0 auto;
     padding: 0 25px;
     font-weight: normal;
@@ -133,8 +133,8 @@ h3 {
 }
 
 a {
-    color: red;
-    text-decoration: none;
+    color: white;
+    text-decoration: underline;
 }
 
 a:hover {
@@ -189,12 +189,13 @@ article .post-meta {
         0 0 0 12px orange,
         0 0 0 18px black,
         0 0 0 24px yellow,
-        0 0 30px 30px rgba(255,204,0,0.3);
+        0 0 60px 30px rgba(255,204,0,0.2);
     /*width: 700px;*/
     /*margin: 0 0 0 20px;*/
     /*width: 450px;*/
     margin: 0 auto;
     width: 100%;
+    position: relative;
     background: none;
     display: flex;
     align-items: center;
@@ -225,8 +226,12 @@ article .post-meta {
     font-size: 1.5em;
 }
 
-#audio-player .small {
-    font-size: 0.7em;
+#audio-player .probably {
+    font-size: 0.8em;
+    color: #666;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
 }
 
 #audio-button {
