@@ -214,12 +214,12 @@ article .post-meta {
     color: red;
     border: 1px solid red;
     border-radius: 2px;
-    padding: 0.1em 0.4em 0.2em;
+    padding: 2px 5px;
     font-size: 0.8rem;
     letter-spacing: 1px;
     margin-right: 0.6em;
     position: relative;
-    top: -1px;
+    top: -3px;
 }
 
 #audio-player .show {
