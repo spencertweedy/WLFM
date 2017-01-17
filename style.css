@@ -231,14 +231,18 @@ article .post-meta {
 }
 
 #audio-button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border: none;
     outline: none;
+    cursor: pointer;
     background: #000;
-    color: white;
+    color: transparent;
     background: url(assets/play.svg) 50% 50% no-repeat;
-    background-size: 80px 80px;
+    background-size: 80px 60px;
+    animation-name: hueShift;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
 
 #audio-button.pause {
@@ -289,5 +293,15 @@ article .post-meta {
             -20px 20px rgba(62,0,219,0),
             -40px 40px rgba(62,0,219,0),
             -60px 60px rgba(62,0,219,0);
+    }
+}
+
+@keyframes hueShift {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
     }
 }
