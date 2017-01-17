@@ -237,15 +237,13 @@ article .post-meta {
     outline: none;
     background: #000;
     color: white;
-    /*border: 5px solid #fff;
-    border-radius: 50%;*/
     background: url(assets/play.svg) 50% 50% no-repeat;
-    background-size: 100px 100px;
+    background-size: 80px 80px;
 }
 
 #audio-button.pause {
     background: url(assets/pause.svg) 50% 50% no-repeat;
-    background-size: 100px 100px;
+    background-size: 80px 60px;
 }
 
 #audio-player .col:first-child {
