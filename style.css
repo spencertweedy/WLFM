@@ -182,8 +182,7 @@ article .post-meta {
 }
 
 #audio-player {
-    padding: 30px 0;
-    font-size: 1.3em;
+    padding: 30px;
     border: 6px solid red;
     box-shadow: 
         0 0 0 6px black,
@@ -199,7 +198,7 @@ article .post-meta {
     background: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 #audio-player .col div {
@@ -223,7 +222,7 @@ article .post-meta {
 }
 
 #audio-player .show {
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 #audio-player .small {
@@ -240,9 +239,9 @@ article .post-meta {
     color: transparent;
     background: url(assets/play.svg) 50% 50% no-repeat;
     background-size: 80px 60px;
-    animation-name: hueShift;
+    /*animation-name: hueShift;
     animation-duration: 5s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: infinite;*/
 }
 
 #audio-button.pause {
