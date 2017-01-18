@@ -58,22 +58,20 @@ body {
 }
 
 #wrapper {
-    /*display: flex;*/
-    /*height: 100vh;*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
-    position: absolute;
-    width: 100%;
-    top: 60px;
-    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 main {
-    /*margin: 25vh auto;
-    height: 50vh;*/
     width: 640px;
-    height: 100vh;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -81,10 +79,7 @@ main {
 }
 
 footer {
-    position: absolute;
-    bottom: 60px;
-    text-align: center;
-    width: 100%;
+    flex-grow: 1;
 }
 
 /* Page elements */
