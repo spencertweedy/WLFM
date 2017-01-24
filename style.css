@@ -58,16 +58,17 @@ body {
 }
 
 #wrapper {
-    
+    margin: 120px auto;
 }
 
 header {
-    
+    height: 110px;
 }
 
 main {
     width: 640px;
-    margin: 0 auto;
+    margin: 60px auto;
+    padding: 24px 0;
 }
 
 footer {
