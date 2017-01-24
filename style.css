@@ -79,7 +79,7 @@ footer {
 
 h1 {
     text-align: center;
-    font-size: 4.5em;
+    font-size: 72px;
     font-family: 'Syncopate';
     font-weight: 700;
     text-shadow:
@@ -105,7 +105,7 @@ h1:first-letter {
 h2 {
     font-size: 1.3em;
     margin: 0 auto;
-    padding: 0 25px;
+    padding: 0 24px;
     font-weight: normal;
     line-height: 1.3em;
     font-weight: 700;
@@ -135,6 +135,7 @@ nav {
 }
 
 nav a {
+    color: yellow;
     color: gold;
     text-decoration: none;
     margin: 0 1em 0 0;
@@ -178,9 +179,6 @@ article .post-meta {
         0 0 0 18px black,
         0 0 0 24px yellow,
         0 0 60px 30px rgba(255,204,0,0.2);
-    /*width: 700px;*/
-    /*margin: 0 0 0 20px;*/
-    /*width: 450px;*/
     margin: 0 auto;
     width: 568px;
     position: relative;
@@ -215,8 +213,8 @@ article .post-meta {
     font-size: 0.8em;
     color: #666;
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 16px;
+    right: 16px;
 }
 
 #audio-button {
@@ -225,13 +223,10 @@ article .post-meta {
     border: none;
     outline: none;
     cursor: pointer;
-    background: #000;
+    background-color: transparent;
     color: transparent;
     background: url(assets/play.svg) 50% 50% no-repeat;
     background-size: 80px 60px;
-    /*animation-name: hueShift;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;*/
 }
 
 #audio-button.pause {
@@ -249,7 +244,6 @@ article .post-meta {
 
 #audio-player .col:last-child {
     display: inline-block;
-    width: 50%;
     height: 70px;
     padding-top: 10px;
 }
@@ -288,15 +282,5 @@ article .post-meta {
             -20px 20px rgba(62,0,219,0),
             -40px 40px rgba(62,0,219,0),
             -60px 60px rgba(62,0,219,0);
-    }
-}
-
-@keyframes hueShift {
-    0% {
-        filter: hue-rotate(0deg);
-    }
-
-    100% {
-        filter: hue-rotate(360deg);
     }
 }
