@@ -62,13 +62,14 @@ body {
 }
 
 header {
-    height: 110px;
+    height: 100px;
 }
 
 main {
-    width: 640px;
-    margin: 60px auto;
-    padding: 24px 0;
+    width: 100%;
+    max-width: 640px;
+    margin: 60px auto 30px;
+    padding: 24px 48px;
 }
 
 footer {
@@ -115,9 +116,17 @@ h2 {
 h3 {
     font-family: 'Syncopate';
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 1.5em;
+    letter-spacing: 3px;
     font-weight: normal;
-    margin-bottom: 0.5em;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h4 {
+    color: red;
+    font-size: 1.3em;
+    margin-bottom: 1rem;
 }
 
 a {
@@ -127,6 +136,17 @@ a {
 
 a:hover {
 
+}
+
+p {
+    line-height: 1.5em;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+p:last-child {
+    margin-bottom: 0;
 }
 
 nav {
@@ -147,27 +167,32 @@ nav a:last-child {
 }
 
 article {
-    margin-bottom: 2.5em;
+    position: relative;
+    margin: 0 auto 2em;
 }
 
-article p {
-    color: #555;
-}
-
-article .post-body {
-    width: 75%;
-    margin: 0 0 0 25%;
-    line-height: 1.4em;
-}
-
-article .post-meta {
+article time {
+    color: yellow;
+    color: gold;
+    font-size: 0.8rem;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+    width: 30px;
     float: left;
-    color: red;
-    letter-spacing: 2px;
-    font-size: 0.8em;
-    width: 23%;
-    padding-top: 2px;
-    text-align: right;
+    position: absolute;
+    left: -60px;
+}
+
+article p, article blockquote, article ul, article ol, article img, article embed {
+    margin-bottom: 1em;
+    max-width: 100%;
+}
+
+article *:last-child {
+    margin-bottom: 0;
 }
 
 #audio-player {
@@ -180,7 +205,8 @@ article .post-meta {
         0 0 0 24px yellow,
         0 0 60px 30px rgba(255,204,0,0.2);
     margin: 0 auto;
-    width: 568px;
+    width: 100%;
+    max-width: 568px;
     position: relative;
 }
 
