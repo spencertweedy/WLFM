@@ -251,13 +251,16 @@ article *:last-child {
     cursor: pointer;
     background-color: transparent;
     color: transparent;
-    background: url(assets/play.svg) 50% 50% no-repeat;
-    background-size: 80px 60px;
+    background: url(assets/play.png) 50% 50% no-repeat;
+    display: none; /* For noscript fallback */
 }
 
 #audio-button.pause {
-    background: url(assets/pause.svg) 50% 50% no-repeat;
-    background-size: 80px 60px;
+    background: url(assets/pause.png) 50% 50% no-repeat;
+}
+
+#audio-player.yesJS #audio-button {
+    display: block; /* For noscript fallback */
 }
 
 #audio-player .col:first-child {
