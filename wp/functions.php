@@ -128,3 +128,15 @@ function wlfm_javascript_detection() {
 	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'wlfm_javascript_detection', 0 );
+
+/**
+ * Enqueue scripts and styles.
+ */
+function wlfm_scripts() {
+	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'wlfm-fonts', wlfm_fonts_url(), array(), null );
+
+	// Theme stylesheet.
+	wp_enqueue_style( 'wlfm-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'wlfm_scripts' );
