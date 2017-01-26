@@ -12,7 +12,7 @@
 		</main>
 		
 		<footer>
-			<h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
+			<h2><?php bloginfo( 'description' ); ?></h2>
 
 			<nav>
 				<a href="#">About</a>
