@@ -119,6 +119,7 @@ h2 {
     line-height: 1.3em;
     font-weight: 700;
     text-align: center;
+    width: 520px; /* A little hack-y, to avoid using manual line-break in description */
 }
 
 h3 {
@@ -162,16 +163,20 @@ nav {
     margin-top: 1em;
 }
 
+nav li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+
+nav li:last-child {
+    margin: 0;
+}
+
 nav a {
     color: yellow;
     color: gold;
     text-decoration: none;
-    margin: 0 1em 0 0;
     letter-spacing: 2px;
-}
-
-nav a:last-child {
-    margin: 0;
 }
 
 article {

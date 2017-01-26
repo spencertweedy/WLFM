@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 	<div id="wrapper">
 		<header>
-			<h1><?php single_post_title(); ?></h1>
+			<h1><?php bloginfo( 'title' ); ?></h1>
 		</header>
 
 		<main>

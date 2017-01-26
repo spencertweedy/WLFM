@@ -14,12 +14,12 @@
 		<footer>
 			<h2><?php bloginfo( 'description' ); ?></h2>
 
-			<nav>
-				<a href="#">About</a>
-	            <a href="#">News</a>
-	            <a href="#">Trivia</a>
-	            <a href="#">Contact</a>
-			</nav>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'footer-menu',
+					'container'      => 'nav'
+				) );
+			?>
 		</footer>
 <?php wp_footer(); ?>
 	</div><!-- #wrapper -->
