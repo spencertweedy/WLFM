@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WLFM Radio</title>
+        <meta name="description" content="Broadcasting from Lawrence University since 1956. Home of the Great Midwest Trivia Contest.">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>WLFM</h1>
+            </header>
+
+            <main>
+                <div id="audio-player">
+                    <div class="col">
+                        <button id="audio-button" name="Play/pause audio" onclick="audioToggle();return false;">Play/pause audio</button>
+                    </div>
+
+                    <div class="col">
+                        <audio id="audio-host" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
+                        <div><div class="live">LIVE</div><span class="show">Hella Eloquent*</span></div>
+                        <div><a href="#">View full schedule</a> <a href="#">Download stream &rarr;</a>
+                        <span class="probably">*probably</span></div>
+                    </div>
+                </div>
+            </main>
+
+            <footer>
+                <h2>Broadcasting from Lawrence University since 1956. <br />Home of the Great Midwest Trivia Contest.</h2>
+
+                <nav>
+                    <a href="#">About</a>
+                    <a href="#">News</a>
+                    <a href="#">Trivia</a>
+                    <a href="#">Contact</a>
+                </nav>
+
+                <!-- <span>New</span><a href="#">Our Winter 2017 Recommendations</a> -->
+            </footer>
+        </div>
+
+        <script type="text/javascript" defer>
+            var audioPlayer = document.getElementById('audio-host');
+            var audioButton = document.getElementById('audio-button');
+            var audioContainer = document.getElementById('audio-player');
+            audioContainer.className = "yesJS";
+            function audioToggle() {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                    audioButton.className = "pause";
+                } else {
+                    audioPlayer.pause();
+                    audioButton.className = "play";
+                }
+            }
+        </script>
+    </body>
+</html>
