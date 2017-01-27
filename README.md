@@ -1,2 +1,2 @@
 # WLFM
-Lawrence University's WLFM Radio website.
+WordPress theme for Lawrence University's WLFM Radio website.

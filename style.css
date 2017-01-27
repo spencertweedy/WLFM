@@ -228,6 +228,8 @@ article *:last-child {
     height: 80px;
     max-width: 568px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 #audio-player a {
@@ -297,8 +299,6 @@ article *:last-child {
 
 #audio-player .col:last-child {
     display: inline-block;
-    height: 70px;
-    padding-top: 10px;
 }
 
 /* No Javascript fallbacks */
