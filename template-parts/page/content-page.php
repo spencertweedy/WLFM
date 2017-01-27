@@ -17,7 +17,7 @@
 		the_content();
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'wlfm' ),
 			'after'  => '</div>',
 		) );
 	?>
