@@ -77,7 +77,7 @@ main {
     width: 100%;
     max-width: 640px;
     margin: 60px auto 30px;
-    padding: 24px 48px;
+    padding: 24px 0;
 }
 
 footer {
@@ -303,19 +303,19 @@ article *:last-child {
 
 /* No Javascript fallbacks */
 
-#audio-player {
+.no-js #audio-player {
     height: auto;
 }
 
-#audio-player .col:first-child {
+.no-js #audio-player .col:first-child {
     display: none;
 }
 
-#audio-player #audio-host {
+.no-js #audio-player #audio-host {
     margin-bottom: 1em;
 }
 
-#audio-player noscript div {
+.no-js #audio-player noscript div {
     margin-bottom: 1em;
 }
 
@@ -353,5 +353,41 @@ article *:last-child {
             -20px 20px rgba(62,0,219,0),
             -40px 40px rgba(62,0,219,0),
             -60px 60px rgba(62,0,219,0);
+    }
+}
+
+/* Responsive breakpoints */
+
+@media screen and (max-width: 760px) {
+    #wrapper {
+        margin: 60px auto;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 0.8em;
+        width: auto;
+    }
+
+    #audio-player {
+        height: auto;
+        width: 300px;
+        text-align: center;
+    }
+
+    #audio-player .col:first-child {
+        display: block;
+        float: none;
+        margin: 0 auto 30px;
+    }
+
+    #audio-player .col:last-child {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 0;
     }
 }
