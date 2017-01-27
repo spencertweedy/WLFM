@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Syncopate:400,700');
+/*
+Theme Name: WLFM
+Theme URI: http://wlfm.lawrence.edu/
+Author: WLFM
+Author URI: http://wlfm.lawrence.edu/
+Description: The WLFM WordPress theme.
+Version: 1.0
+Text Domain: wlfm
+*/
 
 /* CSS Reset */
 
@@ -69,7 +77,7 @@ main {
     width: 100%;
     max-width: 640px;
     margin: 60px auto 30px;
-    padding: 24px 48px;
+    padding: 24px 0;
 }
 
 footer {
@@ -83,6 +91,7 @@ h1 {
     font-size: 72px;
     font-family: 'Syncopate';
     font-weight: 700;
+    color: #eee;
     text-shadow:
         0px 0px 40px rgba(0,157,219,1),
         20px 20px 2px rgba(0,157,219,0.9),
@@ -103,6 +112,11 @@ h1:first-letter {
     letter-spacing: -1px;
 }
 
+h1 a {
+    text-decoration: none;
+    color: #eee;
+}
+
 h2 {
     font-size: 1.3em;
     margin: 0 auto;
@@ -111,6 +125,7 @@ h2 {
     line-height: 1.3em;
     font-weight: 700;
     text-align: center;
+    width: 520px; /* A little hack-y, to avoid using manual line-break in description */
 }
 
 h3 {
@@ -154,16 +169,20 @@ nav {
     margin-top: 1em;
 }
 
+nav li {
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+
+nav li:last-child {
+    margin: 0;
+}
+
 nav a {
     color: yellow;
     color: gold;
     text-decoration: none;
-    margin: 0 1em 0 0;
     letter-spacing: 2px;
-}
-
-nav a:last-child {
-    margin: 0;
 }
 
 article {
@@ -206,8 +225,18 @@ article *:last-child {
         0 0 60px 30px rgba(255,204,0,0.2);
     margin: 0 auto;
     width: 100%;
+    height: 80px;
     max-width: 568px;
     position: relative;
+}
+
+#audio-player a {
+    margin-right: 0.5em;
+    color: #555;
+}
+
+#audio-player a:last-child {
+    margin-right: 0;
 }
 
 #audio-player .col > div {
@@ -252,15 +281,10 @@ article *:last-child {
     background-color: transparent;
     color: transparent;
     background: url(assets/play.png) 50% 50% no-repeat;
-    display: none; /* For noscript fallback */
 }
 
 #audio-button.pause {
     background: url(assets/pause.png) 50% 50% no-repeat;
-}
-
-#audio-player.yesJS #audio-button {
-    display: block; /* For noscript fallback */
 }
 
 #audio-player .col:first-child {
@@ -275,6 +299,24 @@ article *:last-child {
     display: inline-block;
     height: 70px;
     padding-top: 10px;
+}
+
+/* No Javascript fallbacks */
+
+.no-js #audio-player {
+    height: auto;
+}
+
+.no-js #audio-player .col:first-child {
+    display: none;
+}
+
+.no-js #audio-player #audio-host {
+    margin-bottom: 1em;
+}
+
+.no-js #audio-player noscript div {
+    margin-bottom: 1em;
 }
 
 /* Animation */
@@ -311,5 +353,41 @@ article *:last-child {
             -20px 20px rgba(62,0,219,0),
             -40px 40px rgba(62,0,219,0),
             -60px 60px rgba(62,0,219,0);
+    }
+}
+
+/* Responsive breakpoints */
+
+@media screen and (max-width: 760px) {
+    #wrapper {
+        margin: 60px auto;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 0.8em;
+        width: auto;
+    }
+
+    #audio-player {
+        height: auto;
+        width: 300px;
+        text-align: center;
+    }
+
+    #audio-player .col:first-child {
+        display: block;
+        float: none;
+        margin: 0 auto 30px;
+    }
+
+    #audio-player .col:last-child {
+        display: block;
+        width: auto;
+        height: auto;
+        padding: 0;
     }
 }
