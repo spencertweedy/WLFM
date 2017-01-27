@@ -196,19 +196,18 @@ article {
 }
 
 article time {
-    color: yellow;
+    color: yellow; /* Fallback color, since gold is new and fancy */
     color: gold;
-    font-size: 0.8rem;
-    line-height: 1.5em;
+    font-size: 0.7rem;
+    line-height: 1.2rem;
     text-transform: uppercase;
-    margin-bottom: 1rem;
     display: block;
-    text-align: center;
-    width: 30px;
+    text-align: right;
+    width: 100px;
     float: left;
     position: absolute;
-    left: -60px;
-    word-break: break-all;
+    left: -120px;
+    letter-spacing: 0.3em;
 }
 
 article p, article blockquote, article ul, article ol, article img, article embed {

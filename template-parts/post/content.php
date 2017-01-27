@@ -13,7 +13,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<time><?php the_time('M d Y'); ?></time>
+	<time><?php the_time('m.d.Y'); ?></time>
 	<?php the_title( '<h4><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );	?>
 
 	<div class="entry-content">
