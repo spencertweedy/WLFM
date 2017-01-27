@@ -204,7 +204,6 @@ article time {
     display: block;
     text-align: right;
     width: 100px;
-    float: left;
     position: absolute;
     left: -120px;
     letter-spacing: 0.3em;
@@ -375,6 +374,17 @@ article *:last-child {
     h2 {
         font-size: 0.8em;
         width: auto;
+    }
+
+    article {
+        padding: 0 30px;
+    }
+
+    article time {
+        text-align: left;
+        margin-bottom: 0.5rem;
+        position: relative;
+        left: 0;
     }
 
     #audio-player {
