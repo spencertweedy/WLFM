@@ -17,8 +17,6 @@
 
 get_header(); ?>
 
-	<?php the_title( '<h3>', '</h3>' ); ?>
-
 	<?php
 	if ( have_posts() ) :
 
