@@ -28,22 +28,6 @@ get_header(); ?>
             <div><a href="#">View full schedule</a> <a href="#">Download stream &rarr;</a>
             <span class="probably">*probably</span></div>
         </div>
-
-        <script type="text/javascript" defer>
-            var audioPlayer = document.getElementById('audio-host');
-            var audioButton = document.getElementById('audio-button');
-            var audioContainer = document.getElementById('audio-player');
-            audioContainer.className = "yesJS";
-            function audioToggle() {
-                if (audioPlayer.paused) {
-                    audioPlayer.play();
-                    audioButton.className = "pause";
-                } else {
-                    audioPlayer.pause();
-                    audioButton.className = "play";
-                }
-            }
-        </script>
     </div>
 
 <?php get_footer();

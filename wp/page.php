@@ -18,18 +18,16 @@
 get_header(); ?>
 
 	<?php the_title( '<h3>', '</h3>' ); ?>
-	
-	<?php
-	while ( have_posts() ) : the_post();
 
-		get_template_part( 'template-parts/page/content', 'page' );
+	<div class="entry-content">
+		<?php
+			the_content();
 
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
-
-	endwhile; // End of the loop.
-	?>
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
 
 <?php get_footer();

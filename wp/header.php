@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 	<div id="wrapper">
 		<header>
-			<h1><?php bloginfo( 'title' ); ?></h1>
+			<h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo( 'title' ); ?></a></h1>
 		</header>
 
 		<main>
