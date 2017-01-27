@@ -144,6 +144,11 @@ h4 {
     margin-bottom: 1rem;
 }
 
+h4 a {
+    color: red;
+    text-decoration: none;
+}
+
 a {
     color: white;
     text-decoration: underline;
@@ -203,6 +208,7 @@ article time {
     float: left;
     position: absolute;
     left: -60px;
+    word-break: break-all;
 }
 
 article p, article blockquote, article ul, article ol, article img, article embed {
