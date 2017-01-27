@@ -10,7 +10,7 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen
+ * @subpackage WLFM
  * @since 1.0
  * @version 1.0
  */
@@ -24,9 +24,16 @@ get_header(); ?>
 
         <div class="col">
             <audio id="audio-host" src="http://wlfm.lawrence.edu:8000/live">Your browser does not support the audio element.</audio>
-            <div><div class="live">LIVE</div><span class="show">Hella Eloquent*</span></div>
-            <div><a href="#">View full schedule</a> <a href="#">Download stream &rarr;</a>
-            <span class="probably">*probably</span></div>
+            <noscript><div>Please enable Javascript for a better audio player experience.</div></noscript>
+            <div>
+                <div class="live">LIVE</div>
+                <span class="show">Great Midwest Trivia Contest LII</span> <!-- Temporarily hard-coded title; later it'll draw from a YAML file or something -->
+            </div>
+            <div>
+                <a href="http://wlfmradio.lawrence.edu/wp-content/uploads/2016/09/WLFM-Fall-2016-schedule.pdf">View full schedule</a>
+                <a href="http://wlfm.lawrence.edu:8000/live">Download stream</a>
+                <!-- <span class="probably">*probably</span> --> 
+            </div>
         </div>
     </div>
 
